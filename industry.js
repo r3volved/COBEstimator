@@ -1,0 +1,80 @@
+const mil = (n) => n * 1000000
+
+/** Applicable industries */
+const industry = {
+    healthcare:{
+        label:'Healthcare',
+        impact:mil(10.1),
+        regulated:true 
+    },
+    financial:{
+        label:'Financial',
+        impact:mil(5.97),
+        regulated:true  
+    },
+    energy:{
+        label:'Energy',
+        impact:mil(4.72),
+        regulated:true  
+    },
+    pharmaceuticals:{
+        label:'Pharmaceuticals',
+        impact:mil(5.01),
+        regulated:true  
+    },
+    industrial:{
+        label:'Industrial',
+        impact:mil(4.47) 
+    },
+    technology:{
+        label:'Technology',
+        impact:mil(4.97) 
+    },
+    education:{
+        label:'Education',
+        impact:mil(3.86),
+        regulated:true 
+    },
+    services:{
+        label:'Services',
+        impact:mil(4.70) 
+    },
+    entertainment:{
+        label:'Entertainment',
+        impact:mil(3.83) 
+    },
+    transportation:{
+        label:'Transportation',
+        impact:mil(3.59) 
+    },
+    communication:{
+        label:'Communication',
+        impact:mil(3.62) 
+    },
+    consumer:{
+        label:'Consumer',
+        impact:mil(3.86) 
+    },
+    media:{
+        label:'Media',
+        impact:mil(3.15) 
+    },
+    hospitality:{
+        label:'Hospitality',
+        impact:mil(2.94) 
+    },
+    retail:{
+        label:'Retail',
+        impact:mil(3.28) 
+    },
+    research:{
+        label:'Research',
+        impact:mil(3.88) 
+    },
+    public:{
+        label:'Public',
+        impact:mil(2.07) 
+    }
+}
+
+module.exports = industry
