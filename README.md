@@ -53,7 +53,9 @@ const adjusted = new COBEstimator({ cost:1000000 })
     .calculate()
 ```
 
-## Estmate the cost breakdown across cost-segments or per annum
+## Estmate the cost breakdown 
+
+### across cost-segments 
 
 ```js
 const segmentation = costOfBreach.getSegments(adjusted.costOfBreach)
@@ -64,7 +66,11 @@ const segmentation = costOfBreach.getSegments(adjusted.costOfBreach)
 //>   'Detection and Escalation': 235451,
 //>   'Lost Business': 232180
 //> }
+```
 
+### per annum
+
+```js
 const perannum = costOfBreach.getAccrued(adjusted.costOfBreach)
 //> { 
 //>     'Total':711257,
