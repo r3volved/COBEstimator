@@ -6,7 +6,7 @@ Current report: 2022
 Initial cost of breach is calculated against the average cost per record, or scaled against the average cost of a data breach
 
 ```js
-const COBEstimator = require('.')
+const { COBEstimator } = await import(cobLibPath)
 
 //Using a count of all PII records
 const costOfBreach = new COBEstimator({ count:1000 })
@@ -83,7 +83,5 @@ const perannum = costOfBreach.getAccrued(adjusted.costOfBreach)
 ## Accessing the core data
 
 ```js
-const industries = costOfBreach.industries()
-const vectors = costOfBreach.vectors()
-const factors = costOfBreach.factors()
+const { industries, vectors, factors, segments } = await import(cobLibPath)
 ```

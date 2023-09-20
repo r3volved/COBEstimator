@@ -4,7 +4,7 @@ const mil = (n) => n * 1000000
 //ttc = time to contain (days)
 
 /** Potential attack vectors */
-const vectors = {
+export const vectors = {
     destruction:{
         label:'Destructive attack',
         impact:mil(5.12),
@@ -78,5 +78,3 @@ const vectors = {
         ttc:67 
     }
 }
-
-module.exports = vectors

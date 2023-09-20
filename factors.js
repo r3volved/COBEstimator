@@ -2,7 +2,7 @@
 //ttc = time to contain (days)
 
 /** Potential security factors that are in place or may be missing */
-const factors = {
+export const factors = {
     ai:{
         label:'Artificial intelligence platform',
         impact:-300075,
@@ -172,5 +172,3 @@ const factors = {
         ttc:0 
     }
 }
-
-module.exports = factors

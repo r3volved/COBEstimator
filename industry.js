@@ -1,7 +1,7 @@
 const mil = (n) => n * 1000000
 
 /** Applicable industries */
-const industry = {
+export const industry = {
     healthcare:{
         label:'Healthcare',
         impact:mil(10.1),
@@ -76,5 +76,3 @@ const industry = {
         impact:mil(2.07) 
     }
 }
-
-module.exports = industry

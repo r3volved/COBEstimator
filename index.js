@@ -1,14 +1,17 @@
-const path = require('path')
+import { join, dirname } from 'path'
+import { fileURLToPath } from 'url'
 
-const segments = require(path.join(__dirname, 'segments.js'))
-const industry = require(path.join(__dirname, 'industry.js'))
-const vectors = require(path.join(__dirname, 'vectors.js'))
-const factors = require(path.join(__dirname, 'factors.js'))
-const accrued = require(path.join(__dirname, 'accrued.js'))
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
+export const { segments } = await import(join(__dirname, 'segments.js'))
+export const { industry } = await import(join(__dirname, 'industry.js'))
+export const { vectors } = await import(join(__dirname, 'vectors.js'))
+export const { factors } = await import(join(__dirname, 'factors.js'))
+export const { accrued } = await import(join(__dirname, 'accrued.js'))
 
 const mil = (n) => n * 1000000
 
-class COBEstimator {
+export class COBEstimator {
     //Above this record-threshold becomes a mega-breach 
     #threshold = mil(1) 
     //IBM Cost of Breach Report - Averages
@@ -40,10 +43,6 @@ class COBEstimator {
     
     }
 
-    segments()   { return segments }
-    industries() { return industry }
-    vectors()    { return vectors }
-    factors()    { return factors }
     settings()   { return this.#settings }
 
     /**
@@ -226,5 +225,3 @@ class COBEstimator {
     }
     
 }
-
-module.exports = COBEstimator

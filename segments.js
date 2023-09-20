@@ -1,7 +1,7 @@
 const mil = (n) => n * 1000000
 
 /** Cost segmets */
-const segments = {
+export const segments = {
     notification:{
         label:'Notification',
         impact:mil(0.31) 
@@ -19,5 +19,3 @@ const segments = {
         impact:mil(1.42) 
     }
 }
-
-module.exports = segments
